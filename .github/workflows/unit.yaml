@@ -1,0 +1,19 @@
+---
+name: Unit tests
+on:
+  push:
+    paths-ignore:
+      - 'README.md'
+jobs:
+  gotest:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '>=1.16.3'
+          cache: true
+      - run: go test -v ./...
+
