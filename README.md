@@ -6,7 +6,10 @@ Migration of POSIX databases to OpenLDAP.
 
 # Description
 
-This is a Golang CLI mostly based on the
+This is a CLI to migrate users and groups from a Linux POSIX database to a
+OpenLDAP server by creating LDIF files.
+
+It is mostly based on the
 [migrationtools](https://gitlab.com/future-ad-laboratory/migrationtools) code,
 more specifically the `migrate_common.ph`, `migrate_group.pl` and
 `migrate_passwd.pl`. Although the code from there is pretty archaic (even for
@@ -22,22 +25,24 @@ mentioned files.
 
 ## Requirements
 
-The minimal expected schemas to be available in the OpenLDAP server:
+The minimal expected schemas to be available in the OpenLDAP server are:
 
 - cosine
 - nis
 - inetorgperson
 - misc
 
-## Install
-
 ### Development
 
-- see go.mod for minimum Golang version and modules required to compile and run tests
-- GNU Make
-- [golangci-lint](https://golangci-lint.run/usage/install/) is required to run validations.
+- see go.mod for minimum Golang version and modules required to compile and run
+tests.
+- GNU Make.
+- [golangci-lint](https://golangci-lint.run/usage/install/) is required to run
+validations.
 
 See the `Makefile` for the available targets.
+
+## Install
 
 ## References
 
