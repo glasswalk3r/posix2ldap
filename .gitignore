@@ -4,6 +4,7 @@
 *.dll
 *.so
 *.dylib
+posix2ldap
 
 # Test binary, built with `go test -c`
 *.test
