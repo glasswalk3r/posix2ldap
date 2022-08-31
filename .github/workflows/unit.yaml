@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v3
-      - uses: actions/setup-go@v3
+      - name: setup Golang
+        uses: actions/setup-go@v3
         with:
           go-version: '>=1.16.3'
           cache: true
