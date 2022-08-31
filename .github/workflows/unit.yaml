@@ -4,6 +4,7 @@ on:
   push:
     paths-ignore:
       - 'README.md'
+      - 'Makefile'
 jobs:
   gotest:
     name: Run unit tests
