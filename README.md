@@ -32,9 +32,36 @@ The minimal expected schemas to be available in the OpenLDAP server are:
 - inetorgperson
 - misc
 
-### Development
+## Usage
 
-- see go.mod for minimum Golang version and modules required to compile and run
+See the CLI program help:
+
+```
+$ posix2ldap --help
+Usage of ./posix2ldap:
+  -base-dn string
+        Specify the base DN, default to dc=foobar,dc=org (default "dc=foobar,dc=org")
+  -dns-domain string
+        Specify the DNS domain to use, default to foobar.org (default "foobar.org")
+  -ignore-gid-above int
+        Specify the maximum GID to consider retrieving, default is 2000 (default 2000)
+  -ignore-gid-below int
+        Specify the minimum GID to consider retrieving, default is 1000 (default 1000)
+  -ignore-uid-above int
+        Specify the maximum UID to consider retrieving, default is 2000 (default 2000)
+  -ignore-uid-below int
+        Specify the minimum UID to consider retrieving, default is 1000 (default 1000)
+  -mail-host string
+        Optional, define inetLocalMailRecipient attributes if provided
+  -save-to string
+        Optional, path to a file to save LDIF result if provided
+  -use-extended
+        Uses the LDAP inetOrgPerson class for extended attributes, otherwise Account will be used by default
+```
+
+### Development requirements
+
+- see `go.mod` for minimum Golang version and modules required to compile and run
 tests.
 - GNU Make.
 - [golangci-lint](https://golangci-lint.run/usage/install/) is required to run
@@ -43,6 +70,9 @@ validations.
 See the `Makefile` for the available targets.
 
 ## Install
+
+See the project [releases](https://github.com/glasswalk3r/posix2ldap/releases)
+to download the binary.
 
 ## References
 
