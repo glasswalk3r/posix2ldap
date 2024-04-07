@@ -1,6 +1,6 @@
 # posix2ldap
 
-![Unit tests](https://github.com/glasswalk3r/posix2ldap/actions/workflows/unit.yaml/badge.svg?branch=main)
+![Unit tests](https://github.com/glasswalk3r/posix2ldap/actions/workflows/unit.yml/badge.svg?branch=main)
 
 Migration of POSIX databases to OpenLDAP.
 
